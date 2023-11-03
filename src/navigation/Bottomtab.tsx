@@ -8,6 +8,10 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {StyleSheet} from 'react-native';
 import Control from '../screens/Control';
+import Advice from '../screens/Advice';
+import Add from '../screens/Add';
+import History from '../screens/History';
+import Profile from '../screens/Profile';
 
 const Tab = createBottomTabNavigator();
 
@@ -19,10 +23,10 @@ const BottomTab = () => {
           headerShown: false,
           tabBarShowLabel: false,
           tabBarStyle: {
-            backgroundColor: 'black',
+            backgroundColor: '#D9D9D9',
           },
-          tabBarInactiveTintColor: 'white',
-          tabBarActiveTintColor: 'white',
+          tabBarInactiveTintColor: 'black',
+          tabBarActiveTintColor: 'black',
           tabBarIcon: ({color}) => {
             let Icon;
             if (route.name === 'Control') {
@@ -53,10 +57,10 @@ const BottomTab = () => {
           },
         })}>
         <Tab.Screen name="Control" component={Control} />
-        <Tab.Screen name="Advice" component={Control} />
-        <Tab.Screen name="Add" component={Control} />
-        <Tab.Screen name="History" component={Control} />
-        <Tab.Screen name="Profile" component={Control} />
+        <Tab.Screen name="Advice" component={Advice} />
+        <Tab.Screen name="Add" component={Add} />
+        <Tab.Screen name="History" component={History} />
+        <Tab.Screen name="Profile" component={Profile} />
       </Tab.Navigator>
     </NavigationContainer>
   );
@@ -66,8 +70,9 @@ const styles = StyleSheet.create({
   plusStyle: {
     height: 55,
     width: 55,
+
     // backgroundColor: 'green',
-    borderColor: 'pink',
+    borderColor: '#B97A95',
     borderRadius: 27,
     borderWidth: 5,
     // bottom: 10,
