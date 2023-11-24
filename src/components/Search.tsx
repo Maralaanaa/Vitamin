@@ -1,6 +1,6 @@
-import React from 'react';
-import {View, StyleSheet, TextInput} from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import React from 'react'
+import { View, StyleSheet, TextInput } from 'react-native'
+import Icon from 'react-native-vector-icons/MaterialIcons'
 
 const Search = () => {
   return (
@@ -21,13 +21,12 @@ const Search = () => {
         </View>
       </View>
     </View>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'grey',
   },
   appBar: {
     flexDirection: 'row',
@@ -53,6 +52,6 @@ const styles = StyleSheet.create({
     height: 40,
     color: 'white',
   },
-});
+})
 
-export default Search;
+export default Search

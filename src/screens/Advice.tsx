@@ -1,22 +1,23 @@
-import React from 'react';
-import {SafeAreaView, StyleSheet, View} from 'react-native';
+import React from 'react'
+import { SafeAreaView, StyleSheet, View } from 'react-native'
 // import {Text} from 'react-native';
-import Search from '../components/Search';
+import Search from '../components/Search'
 const Advice = () => {
   return (
-    <SafeAreaView>
-      <View style={styles.homeStyle}>
+    <View style={styles.homeStyle}>
+      <SafeAreaView>
         <Search />
-      </View>
-    </SafeAreaView>
-  );
-};
+      </SafeAreaView>
+    </View>
+  )
+}
 
 const styles = StyleSheet.create({
   homeStyle: {
-    backgroundColor: 'grey',
-    height: 'auto',
+    flex: 1,
+    flexDirection: 'column',
+    backgroundColor: '#716F81',
   },
-});
+})
 
-export default Advice;
+export default Advice

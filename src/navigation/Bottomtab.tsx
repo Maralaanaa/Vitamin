@@ -1,25 +1,25 @@
-import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Foundation from 'react-native-vector-icons/Foundation';
-import Entypo from 'react-native-vector-icons/Entypo';
-import Fontisto from 'react-native-vector-icons/Fontisto';
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import {StyleSheet} from 'react-native';
-import Control from '../screens/Control';
-import Advice from '../screens/Advice';
-import Add from '../screens/Add';
-import History from '../screens/History';
-import Profile from '../screens/Profile';
+import React from 'react'
+import { NavigationContainer } from '@react-navigation/native'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import Foundation from 'react-native-vector-icons/Foundation'
+import Entypo from 'react-native-vector-icons/Entypo'
+import Fontisto from 'react-native-vector-icons/Fontisto'
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+import { StyleSheet } from 'react-native'
+import Control from '../screens/Control'
+import Advice from '../screens/Advice'
+import Add from '../screens/Add'
+import History from '../screens/History'
+import Profile from '../screens/Profile'
 
-const Tab = createBottomTabNavigator();
+const Tab = createBottomTabNavigator()
 
 const BottomTab = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        screenOptions={({route}) => ({
+        screenOptions={({ route }) => ({
           headerShown: false,
           tabBarShowLabel: false,
           tabBarStyle: {
@@ -27,10 +27,10 @@ const BottomTab = () => {
           },
           tabBarInactiveTintColor: 'black',
           tabBarActiveTintColor: 'black',
-          tabBarIcon: ({color}) => {
-            let Icon;
+          tabBarIcon: ({ color }) => {
+            let Icon
             if (route.name === 'Control') {
-              Icon = <Foundation name="home" size={25} color={color} />;
+              Icon = <Foundation name="home" size={25} color={color} />
             } else if (route.name === 'Advice') {
               Icon = (
                 <MaterialCommunityIcons
@@ -38,7 +38,7 @@ const BottomTab = () => {
                   size={25}
                   color={color}
                 />
-              );
+              )
             } else if (route.name === 'Add') {
               Icon = (
                 <Entypo
@@ -47,15 +47,16 @@ const BottomTab = () => {
                   color={color}
                   style={styles.plusStyle}
                 />
-              );
+              )
             } else if (route.name === 'History') {
-              Icon = <Fontisto name="history" size={25} color={color} />;
+              Icon = <Fontisto name="history" size={25} color={color} />
             } else {
-              Icon = <FontAwesome5 name="user-alt" size={25} color={color} />;
+              Icon = <FontAwesome5 name="user-alt" size={25} color={color} />
             }
-            return Icon;
+            return Icon
           },
-        })}>
+        })}
+      >
         <Tab.Screen name="Control" component={Control} />
         <Tab.Screen name="Advice" component={Advice} />
         <Tab.Screen name="Add" component={Add} />
@@ -63,8 +64,8 @@ const BottomTab = () => {
         <Tab.Screen name="Profile" component={Profile} />
       </Tab.Navigator>
     </NavigationContainer>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   plusStyle: {
@@ -77,5 +78,5 @@ const styles = StyleSheet.create({
     borderWidth: 5,
     // bottom: 10,
   },
-});
-export default BottomTab;
+})
+export default BottomTab
