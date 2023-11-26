@@ -18,7 +18,7 @@ const Control = () => {
   return (
     <View style={styles.backGround}>
       <SafeAreaView>
-        <View style={styles.homeStyle}>
+        <View>
           <Search />
         </View>
         <View style={styles.buttonStyle}>
@@ -42,9 +42,6 @@ const Control = () => {
 }
 
 const styles = StyleSheet.create({
-  homeStyle: {
-    // backgroundColor: 'grey',
-  },
   buttonStyle: {
     backgroundColor: '#F6AE99',
     borderRadius: 50,

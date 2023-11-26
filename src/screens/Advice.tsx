@@ -4,16 +4,18 @@ import { SafeAreaView, StyleSheet, View } from 'react-native'
 import Search from '../components/Search'
 const Advice = () => {
   return (
-    <View style={styles.homeStyle}>
+    <View style={styles.backGround}>
       <SafeAreaView>
-        <Search />
+        <View>
+          <Search />
+        </View>
       </SafeAreaView>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-  homeStyle: {
+  backGround: {
     flex: 1,
     flexDirection: 'column',
     backgroundColor: '#716F81',

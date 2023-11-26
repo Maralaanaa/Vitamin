@@ -3,16 +3,16 @@ import { SafeAreaView, StyleSheet, View } from 'react-native'
 // import {Text} from 'react-native';
 const Profile = () => {
   return (
-    <SafeAreaView>
-      <View style={styles.homeStyle}></View>
-    </SafeAreaView>
+    <View style={styles.backGround}>
+      <SafeAreaView></SafeAreaView>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
-  homeStyle: {
-    backgroundColor: 'grey',
-    height: 'auto',
+  backGround: {
+    flex: 1,
+    backgroundColor: '#716F81',
   },
 })
 
