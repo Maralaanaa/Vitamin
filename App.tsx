@@ -1,7 +1,7 @@
-import React from 'react';
-import {StatusBar} from 'react-native';
+import React from 'react'
+import { StatusBar } from 'react-native'
 
-import BottomTab from './src/navigation/Bottomtab';
+import BottomTab from './src/navigation/Bottomtab'
 
 const App = () => {
   return (
@@ -9,7 +9,7 @@ const App = () => {
       <StatusBar backgroundColor="black" />
       <BottomTab />
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
