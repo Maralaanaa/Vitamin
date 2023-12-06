@@ -1,13 +1,13 @@
 import React from 'react'
 import { StatusBar } from 'react-native'
 
-import BottomTab from './src/navigation/Bottomtab'
+import Login from './src/screens/Login'
 
 const App = () => {
   return (
     <>
       <StatusBar backgroundColor="black" />
-      <BottomTab />
+      <Login />
     </>
   )
 }
